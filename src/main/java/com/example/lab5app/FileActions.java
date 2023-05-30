@@ -4,13 +4,11 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 public class FileActions {
     public static RandomAccessFile file = null;
-    public static String file_name = "test.txt";
-    public static void openfile(){
+    public static final String FILE_NAME = "user-info.txt";
+    public static void openFile(){
         try{
-            file = new RandomAccessFile(file_name, "rw");
-        } catch (FileNotFoundException e){
-            throw new RuntimeException(e);
-        } catch (IOException e){
+            file = new RandomAccessFile(FILE_NAME, "rw");
+        } catch (Exception e){
             throw new RuntimeException(e);
         }
     }

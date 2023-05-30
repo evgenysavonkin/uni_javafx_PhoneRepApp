@@ -12,7 +12,7 @@ import javafx.collections.FXCollections;
 import java.io.*;
 
 //Ремонт мобильных телефонов
-public class test extends Application {
+public class Main extends Application {
     @Override
     public void start(Stage stage)  {
         HBox request = new HBox();
@@ -95,7 +95,7 @@ public class test extends Application {
                 String txt1 = txt.getText();
                 try {
                     String data = "\nProduced by: " + textproizv + "\nName of client: " + name1 + "\nMobile number of client: " + num1 + "\nDoes a client have a guarantee: " + isgar1 + "\nDescription of a problem: " + txt1 + "\n\n";
-                    FileActions.openfile();
+                    FileActions.openFile();
                     FileActions.file.seek(FileActions.file.length());
                     FileActions.file.writeBytes(data);
                     FileActions.file.close();
